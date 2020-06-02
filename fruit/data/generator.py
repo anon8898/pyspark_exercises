@@ -10,7 +10,7 @@ def choosing_bounds(lines):
         lower_bound = 10 ** (len([x for x in str(lines * 10)]) - 2)
     return [upper_bound, lower_bound]
 
-def fruit(lines = 1000):
+def fruit(lines = 100000):
     if lines < 10:
         print("lines value should be at least 10")
         lines = 10

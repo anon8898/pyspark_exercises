@@ -9,10 +9,10 @@ from pyspark.sql.types import IntegerType
 
 class start_spark:
 
-    def __init__(self, lines = 1000):
+    def __init__(self, lines = 100000):
         data = generator.fruit(lines = int(lines))
         self.spark = SparkSession.builder.appName("fruit_categories").master("local[*]").getOrCreate()
-        self.spark.sparkContext.setLogLevel("WARN")
+#        self.spark.sparkContext.setLogLevel("WARN")
         self.rawDF = self.spark.createDataFrame(data).toDF("customer_id", "age", "items")
         ##self.rawDF.show(10, False)
 
@@ -27,7 +27,7 @@ class start_spark:
                   .dropDuplicates()\
                   .orderBy(desc("count_apples"), "customer_id")\
                   .show(15)
-        spark.stop()
+        self.spark.stop()
 
     ## Qustion Two: Count how many pears are bought by customers, split by consumers above the age of 30, and below (or equal) the age of 30
     def question_two(self):
@@ -37,7 +37,7 @@ class start_spark:
                   .groupBy("age_bracket")\
                   .agg(count("items_list").alias("count_pears"))\
                   .show(15)
-        spark.stop()
+        self.spark.stop()
 
     ## Question Three: count how many fruits are consumed per person, each fruit needs to be a new column
     def question_three(self):
@@ -58,7 +58,7 @@ class start_spark:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = "pyspark exercises - fruit")
-    parser.add_argument("-l", "--lines", dest = "lines", action = "store", help = "number of lines the data generated will be, a minimum of 10 lines is required", default = 1000)
+    parser.add_argument("-l", "--lines", dest = "lines", action = "store", help = "number of lines the data generated will be, a minimum of 10 lines is required", default = 100000)
     parser.add_argument("-o", "--option", dest = "option", help = "how the question will be evaluated, options include udf, spark, sql")
     args = parser.parse_args()
 
