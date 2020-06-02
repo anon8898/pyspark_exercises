@@ -12,3 +12,7 @@ contributions are always welcome - enjoy!
 
 *Note*
 - most solutions provided are using dataframes, however these exercises can be done using rdd's, and some not using pyspark at all and using pandas/pure python
+- all solutions are designed to run via the method
+```
+$ spark-submit solution.py [options]
+```
