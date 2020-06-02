@@ -1,8 +1,8 @@
-#PySpark Exercises
+# PySpark Exercises
 
 **linear trend example**
 
-##Data
+## Data
 
 If working from this directory, the data can be imported with the following command
 
@@ -15,7 +15,7 @@ data = generator.basic_linear(lines = 1000)
 
 Alternatively, the data can be run from the generator script in the data folder, and piped into a text file for a static import
 
-##Questions
+## Questions
 
 **Question One**
 
