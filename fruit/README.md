@@ -37,7 +37,7 @@ Alternatively, the data can be run directly into a text output to be used from a
 
 **Questions One**
 
-Count how mamy apples are bought per customer.
+Count how many apples are bought per customer.
 
 Order the results in descending order by the customer that bought the most apples, then by customer id (in any order)
 

@@ -9,3 +9,6 @@ The questions are found in the README of each folder, as well as how to import t
 The solutions provided for each section will only outline one possible way to complete the problems, there will always be another way to solve the problem than the one shown in the solutions script.
 
 contributions are always welcome - enjoy!
+
+*Note*
+- most solutions provided are using dataframes, however these exercises can be done using rdd's, and some not using pyspark at all and using pandas/pure python

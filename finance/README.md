@@ -27,7 +27,9 @@ Alternatively, the data can be run directly into a text output to be used from a
 
 ## Questions
 
-**Q1. put the data into a dataframe where the schema for the columns is string, date, float, string**
+**Question One**
+
+Put the data into a dataframe where the schema for the columns is string, date, float, string**
 
 *potential format*
 ```
@@ -38,7 +40,11 @@ root
  |-- company: string (nullable = true)
 ```
 
-**Q2. aggregate the 'purchase_costs' column to find the most profitable company**
+**Question Two**
 
-**Q3. which date is the most profitable per company**
+Aggregate the 'purchase_costs' column to find the most profitable company
+
+**Question Three**
+
+Which date is the most profitable per company
 
