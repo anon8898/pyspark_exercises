@@ -16,7 +16,7 @@ def fruit(lines = 100000):
         lines = 10
     upper_bound, lower_bound = choosing_bounds(lines)
     options = ['apple', 'banana', 'orange', 'pear', 'cherry']
-    customers = [ sample(range(lower_bound, upper_bound), k = 1)[0] for x in range(1, lines) ]
+    customers = sample(range(lower_bound, upper_bound), k = lines)
     num_choices = [ uniform(1,5) for x in range(1,lines) ]
     customer_choices = [ ",".join(choices(options, k = int(x))) for x in num_choices ]
     age = [ int(uniform(18,55)) for x in customers ]
