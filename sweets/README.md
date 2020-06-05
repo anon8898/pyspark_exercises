@@ -36,6 +36,6 @@ The location columns (one, two three) are how the funds for a sweet and customer
 +-------+------------+------------+--------------+
 ```
 
-*Question Three*
+**Question Three**
 
 Find all instances of velvet flavoured sweets and count which one has the most instances
